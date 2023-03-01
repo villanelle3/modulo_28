@@ -1,3 +1,5 @@
+import "./perfil.css"
+
 const Perfil = () => {
     const usuario = {
         nome: "villanelle3",
@@ -5,7 +7,7 @@ const Perfil = () => {
     }
     return(
         <div>
-            <img src={usuario.avatar} alt="" />
+            <img className="avatar" src={usuario.avatar} alt="" />
             <h3>{usuario.nome}</h3>
         </div>
     )

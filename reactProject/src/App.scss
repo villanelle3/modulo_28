@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+$roboto-slab: 'Roboto Slab', serif;   
+$myColor: red;
+$shade1: #ececec; 
+$shade2: #9fd3c7; 
+$shade3: #385170; 
+$shade4:  #142d4c;
+
+@function mobilie-text-size($ref) {
+    $result: $ref - 8px;
+    @return $result;
+}
+
+header{
+    background-color: $shade2;
+    .titulo{
+        padding: 8px;
+        text-align: center;
+        color: $shade4;
+        text-shadow: 1px 1px 1px $shade3;
+        font-family: $roboto-slab;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    @media screen and (max-width: 767px) {
+        .titulo{
+            font-size: 24px
+        }
+    }
+}
+
+.text-container{
+    .titulo-sm{
+        font-size: 24px;
+        color: $shade3;
+        margin-top: 40px;
+    }
+    p{
+        font-size: 18px;
+    }
+    @media screen and (max-width: 767px) {
+        .titulo-sm{
+            font-size: mobilie-text-size(24px);
+            margin-top: mobilie-text-size(40px);
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+form{
+    margin-top: 40px;
+}
