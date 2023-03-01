@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
 $roboto-slab: 'Roboto Slab', serif;   
-$myColor: red;
 $shade1: #ececec; 
 $shade2: #9fd3c7; 
 $shade3: #385170; 
@@ -9,6 +10,17 @@ $shade4:  #142d4c;
 @function mobilie-text-size($ref) {
     $result: $ref - 8px;
     @return $result;
+}
+
+@mixin botao {
+    font-weight: bold;
+    border: none;
+    transition: 0.7s;
+    border-radius: 16px;
+}
+
+*{
+    font-family: $roboto-slab;
 }
 
 header{
@@ -51,4 +63,66 @@ header{
 
 form{
     margin-top: 40px;
+    input[type=number]{
+        border: 2px solid $shade2;
+        &:focus {
+            border: 2px solid $shade4;
+        }
+    }
+    .btn-primary{
+        background-color: $shade2;
+        color: $shade4;
+        @include botao();
+        &:hover{
+            background-color: #587ca8;;
+            color: $shade1;
+        }
+    }
+
+    .btn-clean{
+        background-color: $shade4;
+        color: $shade1;
+        @include botao();
+        &:hover{
+            background-color: #d6f2eb;
+            color: $shade4;
+        }
+    }
+}
+
+.container-form{
+    max-width: 40%;
+    @media screen and (max-width: 767px) {
+        max-width: 80%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        max-width: 60%;
+    }
+}
+
+.list-group{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .active{
+        background-color: #d6f2eb;
+        color: $shade4;
+        border: $shade2;
+    }
+    .list-title{
+        background-color: $shade4;
+        color: $shade1;
+        font-weight: bold;
+        border-radius: 16px;
+        margin-bottom: 8px;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+        &__item{
+            color: $shade4;
+            font-weight: bolder;
+            @media screen and (max-width: 767px) {
+                font-size: 14px; 
+            }
+        }
+    }
 }

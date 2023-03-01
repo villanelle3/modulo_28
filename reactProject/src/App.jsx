@@ -5,6 +5,7 @@ import "./index"
 import Head from "./components/Head"
 import Text from "./components/Paragrafo"
 import Form from "./components/Form"
+import List from "./components/List"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Head/>
       <Text/>
       <Form/>
+      <List/>
     </>
   )
 }
