@@ -63,7 +63,7 @@ header{
 
 form{
     margin-top: 40px;
-    input[type=number]{
+        .omri{
         border: 2px solid $shade2;
         &:focus {
             border: 2px solid $shade4;

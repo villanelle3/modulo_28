@@ -39,7 +39,6 @@ const List = () => {
                                 <tbody>
                                     <tr>
                                         {titulos.map(item => {
-                                            console.log(item)
                                             return <td key="{item}" className="me-3 mobile-text-size list-title__item text-center">{item}</td>;
                                         })}
                                     </tr>
