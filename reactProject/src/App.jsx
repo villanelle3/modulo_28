@@ -24,7 +24,7 @@ function App() {
       <Head/>
       <Text/>
       <Form/>
-      <List/>
+      {/* <List/> */}
     </>
   )
 }
