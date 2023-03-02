@@ -126,3 +126,30 @@ form{
         }
     }
 }
+
+#result{
+    background-color: $shade3;  
+}
+
+.btn-danger{
+    cursor: context-menu;
+    background-color: $shade3;
+    border: none;
+    margin-bottom: 40px;
+    padding: 14px;
+    &:hover{
+        background-color: $shade3;
+    }
+}
+
+.side-list {
+    &__li{
+        display: inline;
+        float: left;
+    }
+}
+
+
+// .mobile-text-size{
+//     font-size: 13px;
+// }
